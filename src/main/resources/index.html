@@ -13,9 +13,44 @@
     <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>-->
     <script type="text/javascript" src="js/third-party/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/gamecenter.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
 </head>
 <body>
+
+<script type="text/javascript">
+        function deviceList(){getClientList("00000000");}
+        function counterStatus(){queryCounterStatus("00000000","accf233b95f6");}
+        function counterRecord(){queryCounterQty("00000000","accf233b95f6");}
+        function resetRecord(){resetCounter("00000000","accf233b95f6",true, false);}
+        function turnOn(){switchPowerStatus("00000000","accf233b95f6",true);}
+        function turnOff(){switchPowerStatus("00000000","accf233b95f6",false);}
+        function topup1(){topUp("00000000","accf233b95f6","ABCDEF0000", 1);}
+        function topup5(){topUp("00000000","accf233b95f6","ABCDEF0000", 5);}
+        function powerStatus(){queryPowerStatus("00000000","accf233b95f6");}
+
+</script>
+
+
+<select name="select" size="5" id="select">
+</select>
+<ul>
+    <li><a href="javascript:void(0)" onclick="deviceList()">查询联机设备列表</a></li>
+    <li><a href="javascript:void(0)" onclick="counterStatus()">查询计数器开关状态</a></li>
+    <li><a href="javascript:void(0)" onclick="counterRecord()">查询计数器当前记录</a></li>
+    <li><a href="javascript:void(0)" onclick="resetRecord()">重置计数器</a></li>
+    <li><a href="javascript:void(0)" onclick="powerStatus()">查询电源状态</a></li>
+    <li><a href="javascript:void(0)" onclick="turnOn()">开机</a></li>
+    <li><a href="javascript:void(0)" onclick="turnOff()">关机</a></li>
+    <li><a href="javascript:void(0)" onclick="topup1()">加1个币</a></li>
+    <li><a href="javascript:void(0)" onclick="topup5()">加5个币</a></li>
+</ul>
 This is Game Center page!
-    <script>getClientList("webSite")</script>
+<!--<script>getClientList("00000000")</script>-->
+<!--<script>queryCounterStatus("00000000","accf233b95f6")</script>-->
+<!--<script>queryCounterQty("00000000","accf233b95f6")</script>-->
+<!--<script>resetCounter("00000000","accf233b95f6",true, false)</script>-->
+<!--<script>topUp("00000000","accf233b95f6","ABCDEF0000", 3)</script>-->
+<!--<script>queryPowerStatus("00000000","accf233b95f6")</script>-->
+<!--<script>switchPowerStatus("00000000","accf233b95f6",true)</script>-->
 </body>
 </html>
